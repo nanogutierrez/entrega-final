@@ -1,0 +1,421 @@
+/* line 1, ../../../../TentatortasGutierrez/scss/index.scss */
+#grilla {
+  display: grid;
+  grid-template-areas: "header header" "productos productos" "precios publicidad" "sucursal publicidad" "footer footer";
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 150px min 200px 300px min 400px 200px min 300px 150px;
+  grid-column-gap: 40px;
+  grid-row-gap: 50px;
+  max-width: 2000px;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(172, 207, 158, 0.221);
+}
+
+@media (max-width: 1199px) {
+  /* line 21, ../../../../TentatortasGutierrez/scss/index.scss */
+  #grilla {
+    grid-template-areas: "header header" "productos productos" "precios publicidad" "sucursal publicidad" "footer footer";
+    grid-template-columns: repeat 2, 50%;
+    grid-template-rows: repeat 4, 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 34, ../../../../TentatortasGutierrez/scss/index.scss */
+  #grilla {
+    grid-template-areas: "header" "productos" "precios" "sucursal" "publicidad" "footer";
+    grid-template-rows: repeat 100%;
+    grid-template-columns: repeat 50%;
+  }
+}
+
+/* line 48, ../../../../TentatortasGutierrez/scss/index.scss */
+.border {
+  border: 1px solid black;
+}
+
+/* line 52, ../../../../TentatortasGutierrez/scss/index.scss */
+section#productos {
+  grid-area: productos;
+}
+
+/* line 56, ../../../../TentatortasGutierrez/scss/index.scss */
+section#precios {
+  grid-area: precios;
+}
+
+/* line 60, ../../../../TentatortasGutierrez/scss/index.scss */
+section#sucursal {
+  grid-area: sucursal;
+}
+
+/* line 64, ../../../../TentatortasGutierrez/scss/index.scss */
+aside {
+  grid-area: publicidad;
+}
+
+/* line 68, ../../../../TentatortasGutierrez/scss/index.scss */
+footer {
+  grid-area: footer;
+  background-color: rgba(247, 138, 138, 0.822);
+}
+
+/* line 73, ../../../../TentatortasGutierrez/scss/index.scss */
+footer {
+  font-size: 20px;
+}
+
+/* line 77, ../../../../TentatortasGutierrez/scss/index.scss */
+span {
+  font-size: 30px;
+  color: #5768e8;
+  width: bold;
+}
+
+/* line 83, ../../../../TentatortasGutierrez/scss/index.scss */
+header {
+  grid-area: header;
+  background-size: 80%;
+  font-size: 35px;
+  transition: transform 0.3s;
+}
+
+/* line 89, ../../../../TentatortasGutierrez/scss/index.scss */
+header:hover {
+  transform: transition;
+  background-image: url(https://images.aws.nestle.recipes/original/e89d19d331ac413811e3b1c11a893991_torta-princesa.jpg);
+}
+
+/* line 96, ../../../../TentatortasGutierrez/scss/index.scss */
+header #titulo h1 {
+  color: #f47676;
+  font-size: 45px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+/* line 102, ../../../../TentatortasGutierrez/scss/index.scss */
+header #titulo h1:hover {
+  transform: translate(100px, 10px);
+}
+
+/* line 109, ../../../../TentatortasGutierrez/scss/index.scss */
+#productos h2 {
+  color: rgba(209, 81, 81, 0.696);
+  background-color: #f7eaea;
+  transition: transform 0.3s;
+}
+
+/* line 114, ../../../../TentatortasGutierrez/scss/index.scss */
+#productos h2:hover {
+  transform: translate(5px, 5px);
+}
+
+/* line 121, ../../../../TentatortasGutierrez/scss/index.scss */
+#tortas {
+  color: #a36a6a;
+  font-family: "Nunito Sans";
+  transition: transform 0.3s;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+/* line 144, ../../../../TentatortasGutierrez/scss/index.scss */
+#tortas:hover {
+  transform: rotate(2deg);
+}
+
+/* line 148, ../../../../TentatortasGutierrez/scss/index.scss */
+#tartas {
+  color: #a36a6a;
+  font-family: "Nunito Sans";
+  transition: transform 0.3s;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+/* line 156, ../../../../TentatortasGutierrez/scss/index.scss */
+#tartas:hover {
+  transform: rotate(2deg);
+}
+
+/* line 163, ../../../../TentatortasGutierrez/scss/index.scss */
+#budines {
+  color: #a36a6a;
+  font-family: "Nunito Sans";
+  transition: transform 0.3s;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+/* line 171, ../../../../TentatortasGutierrez/scss/index.scss */
+#budines:hover {
+  transform: rotate(2deg);
+}
+
+/* line 178, ../../../../TentatortasGutierrez/scss/index.scss */
+#chocolates {
+  color: #a36a6a;
+  font-family: "Nunito Sans";
+  transition: transform 0.3s;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+/* line 186, ../../../../TentatortasGutierrez/scss/index.scss */
+#chocolates:hover {
+  transform: rotate(2deg);
+}
+
+/* line 193, ../../../../TentatortasGutierrez/scss/index.scss */
+#precios h2 {
+  color: rgba(209, 81, 81, 0.696);
+  background-color: #f7eaea;
+  transition: transform 0.3s;
+}
+
+/* line 198, ../../../../TentatortasGutierrez/scss/index.scss */
+#precios h2:hover {
+  transform: translate(5px, 5px);
+}
+
+/* line 204, ../../../../TentatortasGutierrez/scss/index.scss */
+#sucursal h2 {
+  color: rgba(209, 81, 81, 0.696);
+  background-color: #f7eaea;
+  transition: transform 0.3s;
+}
+
+/* line 209, ../../../../TentatortasGutierrez/scss/index.scss */
+#sucursal h2:hover {
+  transform: translate(5px, 5px);
+}
+
+/* line 216, ../../../../TentatortasGutierrez/scss/index.scss */
+#contacto h2 {
+  color: rgba(209, 81, 81, 0.696);
+  background-color: #f7eaea;
+  transition: transform 0.3s;
+}
+
+/* line 221, ../../../../TentatortasGutierrez/scss/index.scss */
+#contacto h2:hover {
+  transform: translate(5px, 5px);
+}
+
+/* line 228, ../../../../TentatortasGutierrez/scss/index.scss */
+#asociate h2 {
+  color: rgba(209, 81, 81, 0.696);
+  background-color: #f7eaea;
+  transition: transform 0.3s;
+}
+
+/* line 233, ../../../../TentatortasGutierrez/scss/index.scss */
+#asociate h2:hover {
+  transform: translate(5px, 5px);
+}
+
+/* line 240, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen1 {
+  filter: blur(2px);
+  filter: grayscale(0.5);
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 5px;
+  height: 90%;
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 251, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen1:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  cursor: pointer;
+  filter: grayscale(0);
+  outline: solid 3px;
+  filter: blur(0px);
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 266, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen2 {
+  filter: blur(2px);
+  filter: grayscale(0.5);
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 277, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen2:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  cursor: pointer;
+  filter: grayscale(0);
+  outline: solid 3px;
+  filter: blur(0px);
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 293, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen3 {
+  filter: blur(2px);
+  filter: grayscale(0.5);
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 304, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen3:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  cursor: pointer;
+  filter: grayscale(0);
+  outline: solid 3px;
+  filter: blur(0px);
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 318, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen4 {
+  filter: blur(2px);
+  filter: grayscale(0.5);
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 329, ../../../../TentatortasGutierrez/scss/index.scss */
+#imagen4:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  cursor: pointer;
+  filter: grayscale(0);
+  outline: solid 3px;
+  filter: blur(0px);
+  width: 90%;
+  height: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 344, ../../../../TentatortasGutierrez/scss/index.scss */
+input[type=checkbox] {
+  transition: all 0.5s;
+}
+
+/* line 348, ../../../../TentatortasGutierrez/scss/index.scss */
+input[type=checkbox]:checked {
+  width: 64px;
+  height: 64px;
+}
+
+/* line 353, ../../../../TentatortasGutierrez/scss/index.scss */
+input {
+  transition: all 0.5s;
+}
+
+/* line 357, ../../../../TentatortasGutierrez/scss/index.scss */
+input:focus {
+  background-color: #d2e1ef;
+}
+
+/* line 361, ../../../../TentatortasGutierrez/scss/index.scss */
+.card {
+  height: 80%;
+  width: 50%;
+}
+
+/* line 366, ../../../../TentatortasGutierrez/scss/index.scss */
+body .contenedorCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2% 0 2% 0;
+  width: 100%;
+}
+
+/* line 376, ../../../../TentatortasGutierrez/scss/index.scss */
+body .contenedorCards .card1 {
+  display: flex;
+  margin-bottom: 5%;
+  order: 1;
+  flex-grow: 50;
+  flex-basis: 10px;
+}
+
+/* line 384, ../../../../TentatortasGutierrez/scss/index.scss */
+body .contenedorCards .card2 {
+  display: flex;
+  margin-bottom: 1.5%;
+  justify-content: flex-start;
+  order: 2;
+  flex-basis: 10px;
+}
+
+/* line 392, ../../../../TentatortasGutierrez/scss/index.scss */
+body .contenedorCards .card3 {
+  display: flex;
+  margin-bottom: 1.5%;
+  justify-content: flex-start;
+  order: 3;
+  flex-basis: 10px;
+}
+
+/* line 400, ../../../../TentatortasGutierrez/scss/index.scss */
+body .contenedorCards .card4 {
+  display: flex;
+  margin-bottom: 1.5%;
+  justify-content: flex-start;
+  order: 4;
+  flex-basis: 10px;
+}
+
+/* line 409, ../../../../TentatortasGutierrez/scss/index.scss */
+#boton-asociate {
+  background-color: #78ba7a;
+}
+
+/*# sourceMappingURL=index.css.map */
