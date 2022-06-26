@@ -1,0 +1,411 @@
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "productos productos"
+        "precios publicidad"
+        "sucursal publicidad"
+        "footer footer";
+
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 150px min max(200px, 100px) 300px min max(400px, 200px) 200px min max(300px, 150px) 150px;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    max-width: 2000px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(172, 207, 158, 0.221);
+}
+
+@media (max-width: 1199px) {
+    #grilla {
+        grid-template-areas:
+            "header header"
+            "productos productos"
+            "precios publicidad"
+            "sucursal publicidad"
+            "footer footer";
+        grid-template-columns: repeat (2, 50%);
+        grid-template-rows: repeat (4, 25%);
+    }
+}
+
+@media (max-width: 767px) {
+    #grilla {
+        grid-template-areas:
+            "header"
+            "productos"
+            "precios"
+            "sucursal"
+            "publicidad"
+            "footer";
+        grid-template-rows: repeat (100%);
+        grid-template-columns: repeat (50%);
+    }
+}
+
+
+.border {
+    border: 1px solid black;
+}
+
+section#productos {
+    grid-area: productos;
+}
+
+section#precios {
+    grid-area: precios;
+}
+
+section#sucursal {
+    grid-area: sucursal;
+}
+
+aside {
+    grid-area: publicidad;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(247, 138, 138, 0.822);
+}
+
+footer {
+    font-size: 20px;
+}
+
+span {
+    font-size: 30px;
+    color: rgb(87, 104, 232);
+    width: bold;
+}
+
+header {
+    grid-area: header;
+    background-size: 80%;
+    font-size: 35px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: transition;
+        background-image: url(https://images.aws.nestle.recipes/original/e89d19d331ac413811e3b1c11a893991_torta-princesa.jpg);
+    }
+}
+
+
+header #titulo h1 {
+    color: rgb(244, 118, 118);
+    font-size: 45px;
+    font-weight: bold;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(100px, 10px);
+    }
+}
+
+
+
+#productos h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+$subtitle-font:"Nunito Sans";
+
+#tortas {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}
+
+#tortas:hover {
+    transform: rotate(2deg);
+}
+
+#tartas {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#budines {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#chocolates {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#precios h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+#sucursal h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+
+}
+
+
+#contacto h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+
+#asociate h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+
+#imagen1 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    height: 90%;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+#imagen2 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+#imagen3 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#imagen4 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+input[type=checkbox] {
+    transition: all 0.5s;
+}
+
+input[type=checkbox]:checked {
+    width: 64px;
+    height: 64px;
+}
+
+input {
+    transition: all 0.5s;
+}
+
+input:focus {
+    background-color: rgb(210, 225, 239);
+}
+
+.card {
+    height: 80%;
+    width: 50%;
+}
+
+body .contenedorCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2% 0 2% 0;
+    width: 100%;
+
+}
+
+body .contenedorCards .card1 {
+    display: flex;
+    margin-bottom: 5%;
+    order: 1;
+    flex-grow: 50;
+    flex-basis: 10px;
+}
+
+body .contenedorCards .card2 {
+    display: flex;
+    margin-bottom: 1.5%;
+    justify-content: flex-start;
+    order: 2;
+    flex-basis: 10px;
+}
+
+body .contenedorCards .card3 {
+    display: flex;
+    margin-bottom: 1.5%;
+    justify-content: flex-start;
+    order: 3;
+    flex-basis: 10px;
+}
+
+body .contenedorCards .card4 {
+    display: flex;
+    margin-bottom: 1.5%;
+    justify-content: flex-start;
+    order: 4;
+    flex-basis: 10px;
+
+}
+
+#boton-asociate {
+    background-color: rgb(120, 186, 122)
+}
